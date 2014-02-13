@@ -3,14 +3,9 @@ package com.example.demo2s2;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import com.example.demo2s2.R;
-
-import android.os.Bundle;
-import android.app.Activity;
-import android.app.Fragment;
-import android.app.FragmentManager;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
 import android.view.View;
