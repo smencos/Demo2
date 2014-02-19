@@ -115,6 +115,7 @@ public class MainActivity extends ActionBarActivity {
 				toHide = fragments[0];
 				toHide2 = fragments[1];
 				toShow = fragments[2];
+				actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
 				break;
 			
 		}

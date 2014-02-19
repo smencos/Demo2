@@ -9,6 +9,7 @@ import java.util.Locale;
 
 import android.app.ListActivity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.Menu;
@@ -63,17 +64,21 @@ public class ImageDetailActivity extends ListActivity implements OnClickListener
 		switch (item.getItemId()){
 			case R.id.action_share:
 				if (!country.equals("")) {
-					String url = "Te comparto la tienda " + country;
-					Tienda tiendaMos = MainActivity.tiendastarea1.get(country);
-					String nombre = tiendaMos.name1;
-					String dire = tiendaMos.direccion1;
-					String we = tiendaMos.website1;
-					String msg = url + " direccion: " + dire + " Webpage: " + we;
-					Intent intent = new Intent();
-					intent.setAction(Intent.ACTION_SEND);
-					intent.putExtra(Intent.EXTRA_TEXT, msg);
-					intent.setType("text/plain");
-					startActivity(Intent.createChooser(intent, getString(R.string.action_share)));
+					   Uri imageUri;
+				       Intent intent;
+
+				            imageUri = Uri.parse("android.resource://" + getPackageName()
+				                    + "/drawable/" + "aptura");
+
+				            intent = new Intent(Intent.ACTION_SEND);
+				//text
+				            intent.putExtra(Intent.EXTRA_TEXT, "Te comparto la imagen");
+				//image
+				            intent.putExtra(Intent.EXTRA_STREAM, imageUri);
+				//type of things
+				            intent.setType("image/png");
+				//sending
+				            startActivity(intent);
 				}
 				return true; 
 			default: 
