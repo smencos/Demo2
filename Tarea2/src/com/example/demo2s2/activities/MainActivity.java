@@ -73,7 +73,7 @@ public class MainActivity extends ActionBarActivity {
 		drawerLayout.setDrawerListener(drawerToggle);
 		
 		ActionBar actionBar = getSupportActionBar();
-		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+		
 		actionBar.setTitle(drawerOptions[0]);
 		
 		actionBar.setDisplayHomeAsUpEnabled(true);
@@ -93,15 +93,18 @@ public class MainActivity extends ActionBarActivity {
 	
 	public void setContent (int index){
 		Fragment toHide = null;
+		
 		Fragment toShow = null;
 		Fragment toHide2 = null;
 		ActionBar actionBar = getSupportActionBar();
+		
 		switch (index){
 			case 0:
 				toHide = fragments[1];
 				toShow = fragments[0];
 				toHide2 = fragments[2];
-				actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+				
+				actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
 				
 				
 				break;
@@ -109,7 +112,7 @@ public class MainActivity extends ActionBarActivity {
 				toHide = fragments[0];
 				toShow = fragments[1];
 				toHide2 = fragments[2];
-				actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
+				actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 				break;
 			case 2:
 				toHide = fragments[0];
