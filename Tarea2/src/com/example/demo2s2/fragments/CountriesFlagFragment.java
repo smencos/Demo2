@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.webkit.WebView.FindListener;
 
 import com.example.demo2s2.R;
+import com.example.demo2s2.activities.DepthPageTransformer;
 import com.example.demo2s2.data.FlagPagerAdapter;
 
 public class CountriesFlagFragment extends Fragment {
@@ -32,6 +33,7 @@ public class CountriesFlagFragment extends Fragment {
 			Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.fragment_countries_flags, container,false);
 		viewPager = (ViewPager)view.findViewById(R.id.pager);
+		viewPager.setPageTransformer(true, new DepthPageTransformer());
 		return view; 
 	}
 	

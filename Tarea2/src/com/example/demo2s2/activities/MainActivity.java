@@ -31,7 +31,7 @@ public class MainActivity extends ActionBarActivity {
 	private DrawerLayout drawerLayout;
 	private ActionBarDrawerToggle drawerToggle;
 	private Fragment[] fragments = new Fragment[]{
-			new CountriesContentFragment(), new CountriesFlagFragment(), new AboutFragment()
+			new CountriesFlagFragment(), new CountriesContentFragment(), new AboutFragment()
 	};
 	
 	public static Tienda tienda1 = new Tienda("Mall Guatemala", "Ciudad de Guatemala","2388-5600", "8:00AM - 5:00PM", "www.tienda1.com", "tienda1@tienda.com");
